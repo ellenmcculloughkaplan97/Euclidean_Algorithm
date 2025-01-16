@@ -40,6 +40,28 @@ def calculate_gcd(A,B):
         
     return A #once a remainder of 0 is found, we have found the GCD which is A
         
+
+while True:
+    num_1=float(input("Please enter a positive whole number: "))
+    num_2=float(input("Please enter another positive whole number: "))
+    #only continue if both numbers are positive and whole
+    if num_1<0 or num_2 <0 or not num_1.is_integer() or not num_2.is_integer():
+        print("Positive and whole numbers only, please re-enter")
+        continue
+    
+    choice=int(input("Would you like to use 1. A recursive method, 2. a Non-recursive method to calculate the GCD?: "))
+    if choice==1:
+        ans=calculate_gcd_recursive(num_1, num_2)
+    if choice==2:
+        ans=calculate_gcd(num_1, num_2)
+        
+    print (f"The greatest common divisor of {num_1} and {num_2} is {ans}")
+    break
+
+
+    
+                     
+    
         
     
        
